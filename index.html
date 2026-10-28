@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login & Signup</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="form-container">
+
+            <h1>Welcome</h1>
+            <p class="subtitle">Login or create your account</p>
+
+            <div class="tabs">
+                <button id="loginTab" class="active"
+                    onclick="showLogin()">Login</button>
+
+                <button id="signupTab"
+                    onclick="showSignup()">Signup</button>
+            </div>
+
+            <!-- Login Form -->
+
+            <form id="loginForm">
+
+                <div class="input-group">
+                    <label>Email Address</label>
+                    <input type="email"
+                        placeholder="Enter your email"
+                        required>
+                </div>
+
+                <div class="input-group">
+                    <label>Password</label>
+                    <input type="password"
+                        id="loginPassword"
+                        placeholder="Enter your password"
+                        minlength="6"
+                        required>
+                </div>
+
+                <div class="show-password">
+                    <input type="checkbox"
+                        onclick="togglePassword('loginPassword')">
+                    <label>Show Password</label>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    Login
+                </button>
+
+                <p class="message" id="loginMessage"></p>
+
+            </form>
+
+            <!-- Signup Form -->
+
+            <form id="signupForm" class="hidden">
+
+                <div class="input-group">
+                    <label>Full Name</label>
+                    <input type="text"
+                        placeholder="Enter your name"
+                        required>
+                </div>
+
+                <div class="input-group">
+                    <label>Email Address</label>
+                    <input type="email"
+                        placeholder="Enter your email"
+                        required>
+                </div>
+
+                <div class="input-group">
+                    <label>Password</label>
+                    <input type="password"
+                        id="signupPassword"
+                        placeholder="Create a password"
+                        minlength="6"
+                        required>
+                </div>
+
+                <div class="show-password">
+                    <input type="checkbox"
+                        onclick="togglePassword('signupPassword')">
+                    <label>Show Password</label>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    Create Account
+                </button>
+
+                <p class="message" id="signupMessage"></p>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
